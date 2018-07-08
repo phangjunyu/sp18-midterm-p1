@@ -23,6 +23,8 @@ contract Queue {
 
 	/* Add events */
 	// YOUR CODE HERE
+	event Dequeued(address add);
+	event Enqueued(address add);
 
 	/* Add constructor */
 	// YOUR CODE HERE
@@ -78,8 +80,10 @@ contract Queue {
 	function dequeue() public {
 		// YOUR CODE HERE
 		require(!this.empty(), "queue is empty"); //not empty queue
+		address temp = queue[first].add;
 		delete(queue[first]);
 		first += 1;
+		emit Dequeued(temp);
 	}
 
 	/* Places `addr` in the first empty position in the queue */
@@ -89,5 +93,6 @@ contract Queue {
 		last += 1;
 		queue[last].add = addr;
 		queue[last].timeStart = now;
+		emit Enqueued(addr);
 	}
 }

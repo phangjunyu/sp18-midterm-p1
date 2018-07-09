@@ -12,6 +12,11 @@ contract Token is ERC20Interface {
 	// YOUR CODE HERE
 	/// total amount of tokens
     uint256 public totalSupply;
+    mapping(address => uint256) balances;
+
+    constructor(uint256 _totalSupply){
+        totalSupply = _totalSupply;
+    }
 
     /// @param _owner The address from which the balance will be retrieved
     /// @return The balance

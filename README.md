@@ -110,7 +110,7 @@ You have a lot freedom to carry out this assignment as you please. You will be g
 	* This could be a small game or another novel use; it doesn't have to be too sophisticated
 * [MetaMask](https://metamask.io/) or [frontend integration](https://github.com/ethereum/web3.js/)
 
-## Testing 
+## Testing
 You can verify that your smart contract is implemented correctly with `truffle test`. Be sure to have a ganache server running in a separate terminal.
 
 Refresher: in an empty terminal, run `ganache-cli` to initialize a default ganache server. If you get errors, read the [_ganache_ documentation](https://github.com/trufflesuite/ganache-cli).
